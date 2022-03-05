@@ -15,7 +15,6 @@ a {
   color: #222222;
 }
 li {
-  display: inline-block;
   list-style: none;
 }
 h1,
@@ -35,10 +34,10 @@ h1 {
   text-align: center;
   margin: 0px 0px 30px;
 }
-h2 {
+.section-title {
   display: inline-block;
   font-size: 32px;
-  margin: 20px 0px;
+  margin-bottom: 40px;
   padding-bottom: 6px;
   text-align: center;
 }
@@ -50,7 +49,7 @@ p {
   margin: 10px 0px 25px;
   line-height: 25px;
 }
-.meta-tag {
+.post-category {
   text-transform: uppercase;
   font-size: 13px;
   margin: 20px 0px;
@@ -58,11 +57,12 @@ p {
   padding-bottom: 6px;
   color: #999999;
 }
-small {
-  margin: 0px 30px;
+.card-meta {
+  margin: 0px 10px;
   font-size: 14px;
+  display: inline-block;
 }
-small i {
+.card-meta i {
   color: #222222;
   margin-right: 5px;
 }
@@ -104,6 +104,7 @@ header {
   text-transform: capitalize;
   line-height: 16px;
   font-weight: 500;
+  display: inline-block;
 }
 .menu-item a {
   color: #222222;
@@ -122,6 +123,9 @@ header {
   background: transparent;
   color: #ffff;
 }
+li a {
+  display: block;
+}
 .icon {
   height: 40px;
   width: 40px;
@@ -129,7 +133,8 @@ header {
   border-radius: 50%;
   text-align: center;
   background: #333333;
-  margin: 0px 15px;
+  margin: 0px 12px;
+  display: inline-block;
 }
 .icon a {
   color: #ffff;
@@ -143,10 +148,10 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 
-  padding: 170px 0px 50px;
+  padding: 170px 0px 100px;
 }
 .banner-container {
-  width: 66.67%;
+  width: 70%;
   max-width: 100%;
   margin: auto;
   padding: 0px 15px;
@@ -164,8 +169,7 @@ main {
 }
 .trending-post {
   text-align: center;
-
-  margin: 30px;
+  padding-top: 80px;
 }
 .post {
   width: 66.67%;
@@ -178,7 +182,7 @@ main {
   flex: 0 0 auto;
   width: 50%;
   padding: 0px 15px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .post-card img {
   width: 100%;
@@ -186,6 +190,7 @@ main {
 .instagram-post {
   width: 100%;
   text-align: center;
+  padding-top: 80px;
 }
 .galery {
   display: flex;
@@ -200,16 +205,21 @@ main {
   width: calc(100% / 8);
   padding: 0px 10px;
   margin-top: 30px;
+  overflow: hidden;
+  transition: all 300;
+}
+.instagram-photo:hover {
+  transform: scale(1.2);
 }
 
 /* footer section */
 
 footer {
-  padding-top: 80px;
   text-align: center;
 }
 
 .footer-top {
+  padding-top: 80px;
   padding-bottom: 30px;
 }
 .footer-nav {
@@ -231,9 +241,7 @@ small a:hover {
   .container {
     width: 1180px;
   }
-  .banner-container {
-    width: 70%;
-  }
+
   .post {
     width: 75%;
   }
@@ -253,6 +261,9 @@ small a:hover {
 @media only screen and (max-width: 1080px) {
   .container {
     width: 720px;
+  }
+  .menu-item {
+    margin: 0px 10px;
   }
   h1 {
     font-size: 30px;
@@ -275,6 +286,7 @@ small a:hover {
   .container {
     width: 100%;
   }
+
   .banner-container {
     width: 90%;
   }
@@ -299,8 +311,10 @@ small a:hover {
   .container {
     width: 100%;
   }
-
-  h2 {
+  .section-title {
+    font-size: 24px;
+  }
+  .section-title {
     margin: 15px 0px;
   }
   h3 {
@@ -311,7 +325,7 @@ small a:hover {
     line-height: 25px;
     font-size: 12px;
   }
-  .meta-tag {
+  .post-category {
     margin: 15px 0px;
   }
   .instagram-photo {
@@ -335,10 +349,6 @@ small a:hover {
   }
   .footer-top .menu-item {
     font-size: 14px;
-    margin-left: 16px;
-  }
-  article {
-    width: 100%;
   }
 
   h1 {
@@ -349,19 +359,42 @@ small a:hover {
     font-size: 30px;
   }
   .post-card {
-    width: 100%;
+    width: 80%;
     padding: 0;
+    margin: 0px auto;
   }
   h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .post p {
     margin: 10px 0px 20px;
     line-height: 25px;
     font-size: 16px;
   }
-
+  .trending-post {
+    padding-top: 50px;
+  }
+  .instagram-post {
+    padding-top: 50px;
+  }
   .galery {
     padding: 0px 7px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .post-card {
+    width: 100%;
+  }
+  .menu-item {
+    margin: 0px 3px;
+  }
+  .instagram-photo {
+    width: 50%;
+  }
+  .card-meta {
+    margin: 0 2px;
+  }
+  .icon {
+    margin: 0px 6px;
   }
 }
