@@ -12,6 +12,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: #222222;
 }
 li {
   display: inline-block;
@@ -39,15 +40,17 @@ h2 {
   font-size: 32px;
   margin: 20px 0px;
   padding-bottom: 6px;
+  text-align: center;
 }
 h3 {
   font-size: 24px;
 }
+
 p {
   margin: 10px 0px 25px;
   line-height: 25px;
 }
-span {
+.meta-tag {
   text-transform: uppercase;
   font-size: 13px;
   margin: 20px 0px;
@@ -66,11 +69,17 @@ small i {
 img {
   max-width: 100%;
 }
-
+button {
+  border: 0;
+}
 .border {
   border-bottom: 1px solid #dedede;
 }
-
+.container {
+  width: 1320px;
+  margin: auto;
+  padding: 0px 15px;
+}
 /* header section */
 
 header {
@@ -79,51 +88,56 @@ header {
   top: 0;
   left: 0;
   text-align: center;
+  padding: 40px 0px;
 }
-nav {
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  width: 66.66%;
+  padding: 0px 15px;
   margin: auto;
   max-width: 100%;
 }
-.menu-bar {
-  margin: 0 auto;
-}
-.menu {
-  margin-left: 30px;
+
+.menu-item {
+  margin: 0 15px;
   text-transform: capitalize;
   line-height: 16px;
   font-weight: 500;
 }
-.menu a {
+.menu-item a {
   color: #222222;
 }
-.menu:hover {
+.menu-item:hover {
   opacity: 0.7;
 }
 .menu-button {
   display: none;
 }
-.menu-button button {
+.menu-button i {
   font-size: 30px;
+}
+.search {
   border: 0;
   background: transparent;
+  color: #ffff;
 }
 .icon {
   height: 40px;
   width: 40px;
   line-height: 40px;
   border-radius: 50%;
-
   text-align: center;
-  color: #ffff;
   background: #333333;
+  margin: 0px 15px;
 }
+.icon a {
+  color: #ffff;
+}
+
 /* banner section */
 .banner {
+  /* display: none; */
   background-image: url(../image/Group\ 179.jpg);
   background-position: center center;
   background-size: cover;
@@ -131,16 +145,223 @@ nav {
 
   padding: 170px 0px 50px;
 }
+.banner-container {
+  width: 66.67%;
+  max-width: 100%;
+  margin: auto;
+  padding: 0px 15px;
+}
 
 .social-icon {
   text-align: center;
-}
-.social-icon .icon {
-  margin-left: 10px;
 }
 
 /* post section */
 main {
   width: 100%;
   max-width: 100%;
+  text-align: center;
+}
+.trending-post {
+  text-align: center;
+
+  margin: 30px;
+}
+.post {
+  width: 66.67%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-card {
+  flex: 0 0 auto;
+  width: 50%;
+  padding: 0px 15px;
+  margin-top: 30px;
+}
+.post-card img {
+  width: 100%;
+}
+.instagram-post {
+  width: 100%;
+  text-align: center;
+}
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 15px;
+}
+/* .galery img {
+  width: 100%;
+} */
+.instagram-photo {
+  flex: 0 0 auto;
+  width: calc(100% / 8);
+  padding: 0px 10px;
+  margin-top: 30px;
+}
+
+/* footer section */
+
+footer {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.footer-top {
+  padding-bottom: 30px;
+}
+.footer-nav {
+  margin: 30px 0px;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 35px 0px;
+}
+small a {
+  color: #999999;
+}
+small a:hover {
+  color: #222222;
+}
+
+/* responsive design */
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 1180px;
+  }
+  .banner-container {
+    width: 70%;
+  }
+  .post {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .container {
+    width: 980px;
+  }
+  .banner-container {
+    width: 85%;
+  }
+  .post {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .container {
+    width: 720px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  small {
+    margin: 0px 10px;
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .post p {
+    font-size: 14px;
+  }
+  .instagram-photo {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .banner-container {
+    width: 90%;
+  }
+  .post {
+    width: 91%;
+  }
+  .banner {
+    padding-top: 120px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+  /* h1 {
+    font-size: 32px;
+    line-height: 44px;
+  } */
+  .menu-bar {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 15px 0px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  .post p {
+    margin: 10px 0px 20px;
+    line-height: 25px;
+    font-size: 12px;
+  }
+  .meta-tag {
+    margin: 15px 0px;
+  }
+  .instagram-photo {
+    width: calc(100% / 3);
+    padding: 0px 7px;
+  }
+  .icon {
+    margin: 0px 10px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+  }
+  .banner-container {
+    width: 100%;
+  }
+  .post {
+    width: 100%;
+  }
+  .footer-top .menu-item {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+  article {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .post-card {
+    width: 100%;
+    padding: 0;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .post p {
+    margin: 10px 0px 20px;
+    line-height: 25px;
+    font-size: 16px;
+  }
+
+  .galery {
+    padding: 0px 7px;
+  }
 }
