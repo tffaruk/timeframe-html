@@ -201,14 +201,18 @@ main {
   width: 100%;
 } */
 .instagram-photo {
+  transition: 0.5s all ease-in-out;
+  width: 100%;
+}
+.instagram-photo-container {
   flex: 0 0 auto;
   width: calc(100% / 8);
   padding: 0px 10px;
-  margin-top: 30px;
+  height: auto;
+
   overflow: hidden;
-  transition: all 300;
 }
-.instagram-photo:hover {
+.instagram-photo-container:hover .instagram-photo {
   transform: scale(1.2);
 }
 
@@ -278,8 +282,9 @@ small a:hover {
   .post p {
     font-size: 14px;
   }
-  .instagram-photo {
+  .instagram-photo-container {
     width: 25%;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -328,9 +333,10 @@ small a:hover {
   .post-category {
     margin: 15px 0px;
   }
-  .instagram-photo {
+  .instagram-photo-container {
     width: calc(100% / 3);
     padding: 0px 7px;
+    margin-top: 20px;
   }
   .icon {
     margin: 0px 10px;
@@ -388,7 +394,7 @@ small a:hover {
   .menu-item {
     margin: 0px 3px;
   }
-  .instagram-photo {
+  .instagram-photo-container {
     width: 50%;
   }
   .card-meta {
