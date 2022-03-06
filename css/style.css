@@ -41,7 +41,7 @@ h1 {
   padding-bottom: 6px;
   text-align: center;
 }
-h3 {
+.post-title {
   font-size: 24px;
 }
 
@@ -114,6 +114,12 @@ header {
 }
 .menu-button {
   display: none;
+  position: relative;
+  z-index: 999;
+}
+.logo {
+  position: relative;
+  z-index: 999;
 }
 .menu-button i {
   font-size: 30px;
@@ -133,8 +139,9 @@ li a {
   border-radius: 50%;
   text-align: center;
   background: #333333;
-  margin: 0px 12px;
+  margin: 0px 5px;
   display: inline-block;
+  cursor: pointer;
 }
 .icon a {
   color: #ffff;
@@ -142,12 +149,10 @@ li a {
 
 /* banner section */
 .banner {
-  /* display: none; */
   background-image: url(../image/Group\ 179.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
   padding: 170px 0px 100px;
 }
 .banner-container {
@@ -195,7 +200,7 @@ main {
 .galery {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 15px;
+  padding: 0px 10px;
 }
 /* .galery img {
   width: 100%;
@@ -206,9 +211,8 @@ main {
 }
 .instagram-photo-container {
   flex: 0 0 auto;
-  width: calc(100% / 8);
-  padding: 0px 10px;
-  height: auto;
+  width: calc((100% / 8) - 20px);
+  margin: 0px 10px;
 
   overflow: hidden;
 }
@@ -232,11 +236,15 @@ footer {
 .footer-bottom {
   text-align: center;
   padding: 35px 0px;
+  font-size: 14px;
 }
-small a {
+.footer-bottom small {
+  font-size: 14px;
+}
+.footer-bottom a {
   color: #999999;
 }
-small a:hover {
+.footer-bottom a:hover {
   color: #222222;
 }
 
@@ -272,19 +280,14 @@ small a:hover {
   h1 {
     font-size: 30px;
   }
-  small {
-    margin: 0px 10px;
-    font-size: 12px;
-  }
-  h3 {
+
+  .post-title {
     font-size: 18px;
   }
-  .post p {
-    font-size: 14px;
-  }
+
   .instagram-photo-container {
-    width: 25%;
-    margin-top: 20px;
+    width: calc((100% / 3) - 20px);
+    margin: 0px 10px 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -299,9 +302,12 @@ small a:hover {
     width: 91%;
   }
   .banner {
-    padding-top: 120px;
+    padding: 120px 0px 50px;
   }
-
+  .menu-button button {
+    background-color: transparent;
+    cursor: pointer;
+  }
   .menu-button {
     display: block;
   }
@@ -309,10 +315,34 @@ small a:hover {
     font-size: 32px;
     line-height: 44px;
   } */
-  .menu-bar {
-    display: none;
+  .toggle {
+    /* background-color: #dedede; */
+    height: auto;
+    transition: 0.5s;
+  }
+  .toggle .menu-bar {
+    transform: translateY(0);
+  }
+  nav .menu-bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: #dedede;
+    width: 100%;
+    left: 0%;
+    transition: 0.5s;
+    padding-bottom: 50px;
+    padding-top: 120px;
+    transform: translateY(-100%);
   }
 
+  nav .menu-item {
+    display: block;
+    margin-bottom: 30px;
+  }
+  /* .nav-menu {
+    display: block;
+  } */
   .container {
     width: 100%;
   }
@@ -322,24 +352,24 @@ small a:hover {
   .section-title {
     margin: 15px 0px;
   }
-  h3 {
-    font-size: 17px;
-  }
+
   .post p {
     margin: 10px 0px 20px;
     line-height: 25px;
-    font-size: 12px;
+    font-size: 15px;
   }
   .post-category {
     margin: 15px 0px;
   }
   .instagram-photo-container {
-    width: calc(100% / 3);
-    padding: 0px 7px;
-    margin-top: 20px;
+    width: calc((100% / 3) - 20px);
+
+    margin-bottom: 20px;
+    margin: 0px 10px 20px;
   }
-  .icon {
-    margin: 0px 10px;
+
+  .card-meta {
+    margin: 0px 4px;
   }
 }
 
@@ -361,27 +391,21 @@ small a:hover {
     font-size: 28px;
     line-height: 36px;
   }
-  h3 {
-    font-size: 30px;
-  }
+
   .post-card {
     width: 80%;
     padding: 0;
-    margin: 0px auto;
+    margin: 0px auto 30px;
   }
-  h3 {
-    font-size: 20px;
-  }
-  .post p {
-    margin: 10px 0px 20px;
-    line-height: 25px;
-    font-size: 16px;
-  }
+
   .trending-post {
     padding-top: 50px;
   }
   .instagram-post {
     padding-top: 50px;
+  }
+  .instagram-photo-container {
+    margin: 0px 10px 20px;
   }
   .galery {
     padding: 0px 7px;
@@ -395,7 +419,8 @@ small a:hover {
     margin: 0px 3px;
   }
   .instagram-photo-container {
-    width: 50%;
+    width: calc((100% / 2) - 20px);
+    margin: 0px 10px 20px;
   }
   .card-meta {
     margin: 0 2px;
