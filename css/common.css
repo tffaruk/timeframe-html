@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Libre+Caslon+Text&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* common css */
+body {
+  color: #999999;
+  font-family: "Lato", sans-herif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #222222;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "Libre Caslon Text", serif;
+  color: #222222;
+}
+.header{
+	padding:40px 0px;
+	
+	width:100%;
+	clear:both
+}
+.container{
+	width:1340px;
+	margin:auto;
+	padding:15px
+}
+.nav-menu{
+	height:100%
+}
+.logo{
+	position:relative;
+	text-align:center;
+	margin-bottom: 40px;
+}
+.menu-bar{
+	text-align:center;
+	margin-bottom: 40px;
+}
+.menu-item{
+	display:inline-block;
+	margin:0px 10px;
+	text-transform:capitalize
+	
+}
+.menu-item:hover{
+	opacity:0.7
+}
+.menu-button{
+	text-align:center;
+	display:none;
+	
+}
+.menu-button button{
+	font-size: 40px;
+	background: transparent;
+	border: 0;
+	
+}
+/* common */
+
+.section-title {
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 6px;
+ 
+}
+.border {
+  border-bottom: 1px solid #dedede;
+}
+
+/* instagram and footer section */
+.instagram-post{
+	text-align:center;
+	padding-top:100px
+	
+}
+.posts{
+	text-align:center
+}
+.instagram-photo{
+	transition: ease-in-out 0.5s;
+}
+.instagram-photo-container{
+	display:inline-block;
+	margin:0px 10px;
+	overflow:hidden;
+}
+.instagram-photo-container:hover .instagram-photo{
+	transform:scale(1.2);
+}
+
+.footer-top{
+	padding-top:100px;
+	padding-bottom:40px;
+	text-align:center;
+}
+.footer-logo{
+	margin-bottom:30px;
+}
+.footer-top ul{
+	margin-bottom:30px;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background: #333333;
+  margin: 0px 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.icon a {
+  color: #ffff;
+}
+.footer-bottom{
+	text-align:center;
+	padding:30px 0px;
+}
+
+.footer-bottom small {
+  font-size: 14px;
+}
+.footer-bottom a {
+  color: #999999;
+}
+.footer-bottom a:hover {
+  color: #222222;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 10px 0px 25px;
+  line-height: 25px;
+}
+.post-category {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 20px 0px;
+  display: inline-block;
+  padding-bottom: 6px;
+  color: #999999;
+}
+.card-meta {
+  margin: 0px 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+.card-meta i {
+  color: #222222;
+  margin-right: 5px;
+}
