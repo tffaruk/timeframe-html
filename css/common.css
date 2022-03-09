@@ -34,9 +34,10 @@ h6 {
 	clear:both
 }
 .container{
-	width:1340px;
+	width:100%;
+	max-width:1340px;
 	margin:auto;
-	padding:15px
+	padding:0px 15px
 }
 .nav-menu{
 	height:100%
