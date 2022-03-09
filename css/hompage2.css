@@ -12,6 +12,10 @@ max-width:100%;
 img{
 	max-width:100%
 }
+.container{
+	width:100%;
+	max-width:970px;
+}
 .feature-desc{
 	width:80%;
 	max-width: 722px;
