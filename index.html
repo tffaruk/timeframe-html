@@ -25,13 +25,18 @@
             <button id="button"><i class="fa-solid fa-bars"></i></button>
           </div>
           <ul class="menu-bar" id="menu-bar">
-            <li class="menu-item"><a href="index.html">home</a></li>
+            <li class="menu-item dropdown" id="dropdown"><a  href="#">homepage <i class="fa-solid fa-caret-down"></i></a>
+			<ul class="dropdown-menu">
+			<li ><a href="#">homepage</a></li>
+            <li ><a href="index2.html">homepage 2</a></li>
+			</ul>
+			</li>
             <li class="menu-item"><a href="#">about</a></li>
             <li class="menu-item"><a href="portfolio.html">portfolio</a></li>
             <li class="menu-item"><a href="#">contact</a></li>
             <li class="menu-item"><a href="#">author</a></li>
 
-            <li class="icon">
+            <li class=" icon">
               <button class="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
@@ -239,7 +244,7 @@
         <ul class="footer-nav">
           <li class="menu-item"><a href="/index.html">home</a></li>
           <li class="menu-item"><a href="#">about</a></li>
-          <li class="menu-item"><a href="/portfolio.html"></a></li>
+          <li class="menu-item"><a href="/portfolio.html">portfolio</a></li>
           <li class="menu-item"><a href="#">contact</a></li>
           <li class="menu-item"><a href="#">author</a></li>
         </ul>
@@ -272,6 +277,14 @@
   <script>
     document.getElementById("button").addEventListener("click", function () {
       document.getElementById("header").classList.toggle("toggle");
+	  document.getElementById("dropdown").classList.remove("dropdown-toggle");
+	  
     });
+	
+	 document.getElementById("dropdown").addEventListener("click", function () {
+      document.getElementById("dropdown").classList.toggle("dropdown-toggle");
+    });
+	
+	
   </script>
 </html>

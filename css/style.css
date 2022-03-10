@@ -34,47 +34,7 @@ h1 {
   text-align: center;
   margin: 0px 0px 30px;
 }
-.section-title {
-  display: inline-block;
-  font-size: 32px;
-  margin-bottom: 40px;
-  padding-bottom: 6px;
-  text-align: center;
-}
-.post-title {
-  font-size: 24px;
-}
 
-p {
-  margin: 10px 0px 25px;
-  line-height: 25px;
-}
-.post-category {
-  text-transform: uppercase;
-  font-size: 13px;
-  margin: 20px 0px;
-  display: inline-block;
-  padding-bottom: 6px;
-  color: #999999;
-}
-.card-meta {
-  margin: 0px 10px;
-  font-size: 14px;
-  display: inline-block;
-}
-.card-meta i {
-  color: #222222;
-  margin-right: 5px;
-}
-img {
-  max-width: 100%;
-}
-button {
-  border: 0;
-}
-.border {
-  border-bottom: 1px solid #dedede;
-}
 .container {
   width: 1320px;
   margin: auto;
@@ -105,13 +65,40 @@ header {
   line-height: 16px;
   font-weight: 500;
   display: inline-block;
+  padding:30px 0px
 }
 .menu-item a {
   color: #222222;
 }
-.menu-item:hover {
+.menu-item a:hover {
   opacity: 0.7;
 }
+.dropdown{
+	position:relative;
+	text-align:left
+	
+}
+
+.dropdown ul{
+	position:static;
+	transition:ease-in 0.3s;
+	/* background:white; */
+	z-index:999;
+	width:150px;
+	/* padding:20px 10px 0px; */
+}
+
+.dropdown:hover ul{
+	opacity:1;
+	visibility:visible;
+	/* top:30px */
+}
+
+.dropdown ul li{
+	margin-bottom: 15px;
+}
+
+
 .menu-button {
   display: none;
   position: relative;
@@ -171,6 +158,47 @@ main {
   width: 100%;
   max-width: 100%;
   text-align: center;
+}
+.section-title {
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 6px;
+  text-align: center;
+}
+.post-title {
+  font-size: 24px;
+}
+
+p {
+  margin: 10px 0px 25px;
+  line-height: 25px;
+}
+.post-category {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 20px 0px;
+  display: inline-block;
+  padding-bottom: 6px;
+  color: #999999;
+}
+.card-meta {
+  margin: 0px 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+.card-meta i {
+  color: #222222;
+  margin-right: 5px;
+}
+img {
+  max-width: 100%;
+}
+button {
+  border: 0;
+}
+.border {
+  border-bottom: 1px solid #dedede;
 }
 .trending-post {
   text-align: center;
@@ -294,6 +322,30 @@ footer {
   .container {
     width: 100%;
   }
+  .dropdown{
+	  text-align:center
+  }
+  .dropdown  ul{
+	display:none;
+	
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+	
+}
+.dropdown-toggle ul{
+     position: static;
+     display: inline-block;
+     top: 30px;
+     /* left: 50%; */
+     transform: translate(-50%, 0px);
+     margin-left: 161px;
+     /* margin: auto; */
+     /* width: 100%; */
+     text-align: center;
+     margin-top: 30px;
+}
+
 
   .banner-container {
     width: 90%;
@@ -323,22 +375,35 @@ footer {
   .toggle .menu-bar {
     transform: translateY(0);
   }
+  .nav-menu{
+	  width:100%
+  }
   nav .menu-bar {
     display: block;
     position: absolute;
     top: 0;
     background-color: #dedede;
-    width: 100%;
+    width:100%;
     left: 0%;
     transition: 0.5s;
     padding-bottom: 50px;
     padding-top: 120px;
     transform: translateY(-100%);
+	
   }
-
+ 
   nav .menu-item {
-    display: block;
+   display:inline-block;
+   width:60%;
     margin-bottom: 30px;
+	padding:0px;
+  }
+  
+ 
+  header .icon{
+	  width:40px;
+	  display:block;
+	  margin:auto
   }
   /* .nav-menu {
     display: block;
@@ -428,4 +493,19 @@ footer {
   .icon {
     margin: 0px 6px;
   }
+}
+
+@media only screen and (min-width: 768px){
+	.dropdown ul{
+		position:absolute;
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		width: 220px;
+		transition: .2s;
+		border-radius: 8px;
+		top: 60px;
+		background: white;
+		padding: 20px 10px;
+	}
 }
